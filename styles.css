@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #004d00, #2d572c);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 77, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optionnel : un léger effet de survol */
+header:hover {
+    background: linear-gradient(135deg, #2d572c, #004d00);
+    transition: background 0.5s ease;
+}
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #2d572c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#accueil {
+    background-image: url('fond-bienvenue.jpg'); /*fond-bienvenue.jpg  */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px #004d00;
+}
+
+.ligne-scout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px auto;
+}
+
+.ligne-scout i {
+  color: #006400; /* vert scout */
+  font-size: 20px;
+}
+
+.ligne {
+  width: 40px;
+  height: 2px;
+  background-color: #006400;
+}
+
+/* Bouton scout moderne */
+.btn-scout {
+    display: inline-block;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 100, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-scout:hover {
+    background: linear-gradient(135deg, #38f9d7 0%, #43e97b 100%);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 100, 0, 0.35);
+}
+#presentation {
+    background: linear-gradient(145deg, #e6ffe6, #ffffff);
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 100, 0, 0.15);
+    border-left: 6px solid #38b000;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Motif subtil avec pseudo-élément */
+#presentation::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(rgba(0, 100, 0, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Pour que le contenu reste au-dessus du motif */
+#presentation * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation d’entrée */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#activites {
+    background: radial-gradient(circle at top left, #d9fdd3, #f0fff5);
+    position: relative;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 128, 0, 0.15);
+    animation: fadeInRight 1s ease-out;
+    border-left: 6px solid #2e7d32;
+}
+
+/* Décoration géométrique subtile */
+#activites::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    width: 200%;
+    height: 200%;
+    background-image: linear-gradient(
+        135deg,
+        rgba(0, 100, 0, 0.04) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 100, 0, 0.04) 50%,
+        rgba(0, 100, 0, 0.04) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* Assure la lisibilité du contenu */
+#activites * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Apparition fluide de droite */
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#activites h2 {
+    color: #1b5e20;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#activites ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+#activites ul li {
+    background-color: #ffffffd9;
+    border-left: 4px solid #2e7d32;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    box-shadow: 0 2px 6px rgba(0, 100, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#activites ul li:hover {
+    transform: translateX(5px);
+}
+.btn-scout-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 30px;
+  background: rgba(56, 249, 215, 0.15); /* léger glass effect turquoise clair */
+  border-radius: 40px;
+  color: #26a69a; /* turquoise foncé */
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(56, 249, 215, 0.5);
+  box-shadow: 0 8px 24px rgba(38, 166, 154, 0.2);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-scout-search i {
+  font-size: 22px;
+  color: #26a69a;
+  transition: transform 0.4s ease;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;              /* espace entre icône et texte */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+.search-btn img {
+  width: 18px;
+  height: 18px;
+}
+#chefs {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f7fff7, #e6f5e6);
+  border-radius: 15px;
+  text-align: center;
+}
+
+#chefs h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #006400;
+  margin-bottom: 40px;
+}
+
+.chefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.chef-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,100,0,0.25);
+}
+
+.chef-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #006400;
+}
+
+.chef-card h3 {
+  font-size: 1.3em;
+  margin: 10px 0 5px;
+  color: #006400;
+}
+
+.chef-card .role {
+  font-weight: bold;
+  color: #228B22;
+  margin-bottom: 8px;
+}
+
+.chef-card .contact {
+  font-size: 0.9em;
+  color: #555;
+}
+#chefs {
+  padding: 60px 20px;
+  background-image: url('chefs-bg.jpg'); /* image légère et floutée */
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+.chef-card {
+  background: rgba(255,255,255,0.9); /* carte semi-transparente */
+}
+
+
+}

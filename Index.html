@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TILY Sampana Maitso CV</title>
+    <link rel="icon" type="image/png" href="logo-tily.png"> 
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-image: linear-gradient(135deg, rgba(0, 100, 0, 0.8), rgba(34, 139, 34, 0.8)), url('background-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-left, .logo-right {
+            position: absolute;
+            top: 20px;
+            height: 100px;
+        }
+
+        .logo-left {
+            left: 20px;
+        }
+
+        .logo-right {
+            right: 20px;
+        }
+
+        .search-btn {
+            position: absolute;
+            top: 120px;
+            right: 20px;
+            background-color: #006400;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            font-size: 16px;
+        }
+
+        .search-btn:hover {
+            background-color: #228B22;
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid white;
+            color: white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #006400;
+            border-color: #006400;
+        }
+
+        .header-icons {
+            margin-top: 20px;
+        }
+
+        .header-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.4em;
+            transition: color 0.3s ease;
+        }
+
+        .header-icons a:hover {
+            color: #90ee90;
+        }
+
+        section {
+            padding: 60px 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #006400;
+        }
+
+        section:hover {
+            box-shadow: 0 4px 15px rgba(0, 100, 0, 0.3);
+        }
+
+        section h2 {
+            text-align: center;
+            color: #006400;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        .footer-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.3em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            color: #32CD32;
+        }
+
+        #galerie {
+            background-image: url('background-galerie.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            padding: 40px 0;
+        }
+
+        #galerie h2 {
+            color: white;
+            font-size: 2.5em;
+        }
+
+        #bienvenue-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        #chefs .chef-card {
+            display: inline-block;
+            width: 250px;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            border: 2px solid #006400;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 100, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #chefs .chef-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 100, 0, 0.3);
+        }
+
+        #chefs .chef-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        #chefs .chef-card h3 {
+            color: #006400;
+            font-size: 1.2em;
+        }
+
+        #contact p i {
+            color: #006400;
+            margin-right: 8px;
+        }
+
+        #contact a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        #contact a:hover {
+            color: #228B22;
+        }
+
+        #recommandations form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #recommandations input, 
+        #recommandations textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #006400;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #recommandations button {
+            background-color: #006400;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #recommandations button:hover {
+            background-color: #228B22;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .logo-left, .logo-right {
+                display: none;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-btn {
+                top: 20px;
+                right: 20px;
+                position: fixed;
+            }
+
+            section {
+                margin: 10px;
+                padding: 40px 10px;
+            }
+
+            #chefs .chef-card {
+                width: 200px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <img src="logo-tily.png" alt="Logo Tily" class="logo-left">
+    <img src="logo-scout.png" alt="Logo Scout" class="logo-right">
+    <p class="verset-biblique">Ataovy mpianatra ny firenena rehetra - Mat 28:19b</p>
+    <h1>TILY Sampana Maitso CV</h1>
+    
+    <div class="header-icons">
+        <a href="mailto:contact@tily-cv.org" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+261333368943" title="Téléphone"><i class="fas fa-phone"></i></a>
+        <a href="https://facebook.com/tilycv" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <button class="search-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="loupe">
+    Hikaroka
+  </button>
+    <nav>
+     <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#presentation">Presentation</a></li>
+            <li><a href="#activites">Activites</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<a href="#chefs" class="btn-scout-search">
+  <i class="fas fa-search"></i>
+  <span>HIKAROKA</span>
+</a>
+
+
+
+<section id="accueil">
+    <h2>Bienvenue chez les TILY Sampana Maitso</h2>
+    <p>Tily Sampana Maitso Chapelle Militaire Ampahibe, Fivondronana faha-105.</p>
+    <p>FIVORIANA : Isaky ny asabotsy 14h30</p>
+    <p>TOERANA : Chapelle Militaire Ampahibe (miova arakaraka ny fotoana)</p>
+    <img src="bienvenue-image.jpg" alt="Bienvenue" id="bienvenue-image">
+</section>
+
+<section id="presentation">
+    <h2>Presentation</h2>
+    <p>Ny Tily Sampana Maitso dia manabe sy manolokolo tanora zazalahy 12-16 taona mba hahatonga azy ireo ho :</p>
+    <ul>
+        <li>Vavolombelon’i Jesoa Kristy</li>
+        <li>Olom-pirenena vanona</li>
+        <li>Andrin’ny fianakaviana</li>
+    </ul>
+    <p>Fanomezana sehatra ho an'ny tanora mba hahafahany mandray anjara sy mampiseho ny maha izy azy.</p>
+    <a href="#chefs" class="search-btn">Voir les Chefs</a>
+</section>
+
+
+<!-- Ligne décorative ici -->
+<div class="corde-ligne"></div>
+
+<section id="activites">
+    <h2>Nos Activites</h2>
+    <ul>
+        <li>LASY</li>
+        <li>Fivoahana an-tsaha</li>
+        <li>Firotsahana amin’ny fiaraha-monina</li>
+        <li>Fianarana</li>
+    </ul>
+</section>
+
+
+<section id="galerie">
+    <h2>Galerie</h2>
+    <p>(Des images ou vidéos ici)</p>
+</section>
+
+<section id="chefs">
+  <h2>Nos Chefs</h2>
+  <div class="chefs-grid">
+    
+    
+    <div class="chef-card" style="background-image: url('chef1.jpg');">
+
+  <h3>SORANJA Miahy</h3>
+  <p class="role">Tompon-toerana</p>
+  <p class="contact">+261 33 33 689 43</p>
+</div>
+
+
+    <div class="chef-card">
+      <img src="chef2.jpg" alt="Chef 2">
+      <h3>TEHA Variaky</h3>
+      <p class="role">Mpanampy</p>
+      <p class="contact"> +261 38 45 626 63</p>
+    </div>
+
+    <div class="chef-card">
+      <img src="chef3.jpg" alt="Chef 3">
+      <h3>-</h3>
+      <p class="role">Mpampilalao</p>
+    </div>
+
+    <div class="chef-card">
+      <img src="chef4.jpg" alt="Chef 4">
+      <h3>-</h3>
+      <p class="role">Mpampilalao</p>
+    </div>
+
+    <div class="chef-card">
+      <img src="chef5.jpg" alt="Chef 5">
+      <h3>-</h3>
+      <p class="role">Mpampilalao</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> Email : <a href="mailto:contact@tily-cv.org">contact@tily-cv.org</a></p>
+    <p><i class="fas fa-phone"></i> Telephone : <a href="tel:+261333368943">+261 33 33 689 43</a></p>
+    <p><i class="fab fa-facebook"></i> Facebook : <a href="https://https://web.facebook.com/people/Tily-Sampana-Maitso-CV/100088446647805/" target="_blank">facebook.com/tilycv</a></p>
+</section>
+
+<section id="recommandations">
+    <h2>Soso-kevitra na Fanamarihana</h2>
+    <form>
+        <label for="nom">Anarana :</label><br>
+        <input type="text" id="nom" name="nom" placeholder="Soraty eto ny anaran'ise..."><br>
+
+        <label for="message">Hafatra :</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Soraty eto ny soso-kevitra na fanamarihana..."></textarea><br>
+
+        <button type="submit">Alefa</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 TILY Sampana Maitso CV.</p>
+    <div class="footer-icons">
+        <a href="mailto:contact@tily-cv.org"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+261333368943"><i class="fas fa-phone"></i></a>
+        <a href="https://facebook.com/tilycv" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
